@@ -1,0 +1,23 @@
+{% macro render_item(reg) %}
+<div style="border-style: solid; border-color: black; margin: 5px">
+    <p>
+        <span style="color: black"> ID регистрации:</span>
+        <span style="color: green"> {{reg['regID']}}</span>
+        <span style="color: black"> Дата регистрации:</span>
+        <span style="color: green"> {{reg['regCome']}}</span>
+        <span style="color: black"> Название корабля:</span>
+        <span style="color: green"> {{reg['sName']}}</span>
+        <span style="color: black"> ID номер причала:</span>
+        <span style="color: green"> {{reg['pID']}}</span>
+    </p>
+
+    <div>
+        <form action="" method="post">
+            <input type="hidden" name="regID" value="{{reg['regID']}}">
+            <input type="submit" name="action" value="Набрать бригаду">
+        </form>
+
+    </div>
+
+</div>
+{% endmacro %}

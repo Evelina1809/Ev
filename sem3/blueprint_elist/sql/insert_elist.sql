@@ -1,0 +1,1 @@
+insert Elist values(NULL, 0, '$regID', '$eID', '$input_date')

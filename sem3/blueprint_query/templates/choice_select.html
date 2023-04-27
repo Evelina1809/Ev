@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work with requests</title>
+</head>
+<style>
+    body {
+            background: url(https://img.geliophoto.com/amtp/22_amtp.jpg);
+            background-size: cover;
+    }
+       A:link {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+   }
+   A:visited { text-decoration: none; }
+   A:active { text-decoration: none; }
+    A:hover {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    color: white; /* Цвет ссылки */
+   }
+</style>
+<body>
+  <h4 align = center> Какую информацию Вы хотели бы получить?</h4>
+  <br><br><br>
+
+    <div align = center>
+        <a href ={{url_for('bp_query.queries')}}> Узнать о регистрации кораблей</a>
+        <br><br><br>
+        <a href ={{url_for('bp_query.querie2')}}> Узнать о работе сотрудника на разгрузках</a>
+        <br><br><br>
+        <a href="{{url_for('start_func')}}"> Вернуться назад </a>
+    </div>
+</body>
+</html>

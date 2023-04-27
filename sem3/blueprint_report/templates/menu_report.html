@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню отчетов</title>
+</head>
+
+<style type="text/css">
+    body {
+            background: url('https://img.geliophoto.com/amtp/22_amtp.jpg');
+            background-size: cover;
+    }
+   A:link {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+   }
+   A:visited { text-decoration: none; }
+   A:active { text-decoration: none; }
+    A:hover {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    color: white; /* Цвет ссылки */
+   }
+   .named_list {
+            font-size: 12 pt;
+            color: black;
+            display: inline-block;
+            width: 500px;
+            text-align: left;
+        }
+</style>
+
+<body>
+
+  <center>
+    <h2> Меню отчетов </h2>
+      <center>
+      {% for report in report_list%}
+      <form action='' method = 'POST'>
+          <label for="create_rep" class="named_list">{{report['rep_name']}}</label>
+          <input type=submit name=create_rep id=create_rep value="Создать">
+          <input type=submit name=view_rep value="Смотреть">
+          <input type=hidden name=rep_id  value="{{report['rep_id']}}">
+      </form>
+      {% endfor %}
+      </center>
+      <br><br>
+    <h2>{{message}}</h2>
+      <a href="{{url_for('menu_choice')}}"> Вернуться назад </a>
+  </center>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск</title>
+    <style type="text/css">
+      h2 { font-size  : 14pt;
+           color      : black
+      }
+      label { font-size  : 14pt;
+              color      : green
+      }
+      body {
+            background: url(https://img.geliophoto.com/amtp/22_amtp.jpg);
+            background-size: cover;
+      }
+
+    A:link {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+    }
+    A:visited { text-decoration: none; }
+    A:active { text-decoration: none; }
+
+    A:hover {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    color: white; /* Цвет ссылки */
+    }
+    </style>
+</head>
+<body>
+  <h2 align="center"> Введите временные рамки</h2>
+    <div align = center>
+        <form action="", method ="POST">
+            <label for="year">Введите год</label>
+            <input name = year_name id="year" type ="number" min="1900"  step="1" placeholder = year_name>
+            <br><br>
+            <label for="month">Введите месяц</label>
+            <input name = month_name id="month" type="number" min="1" max="12" step="1" placeholder = month_name>
+            <br><br>
+            <input type = submit value ="Отправить">
+            <br><br>
+            <h1>{{massage}}</h1>
+            <a href="{{url_for('bp_query.choice')}}"> Вернуться назад </a>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+<!--            <input name = year_name id="year" type ="text"  placeholder = year_name>-->
+<!--            <br><br>-->
+<!--            <label for="month">Введите месяц</label>-->
+<!--            <input name = month_name id="month" type="text" placeholder = month_name>-->

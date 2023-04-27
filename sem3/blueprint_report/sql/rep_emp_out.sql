@@ -1,0 +1,1 @@
+select empr_count, empr_month, empr_year from employees_rep where empr_month='$input_month' and empr_year='$input_year'

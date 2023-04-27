@@ -1,0 +1,17 @@
+{
+  "stevedor": [
+    "bp_elist",
+    "bp_query"
+  ],
+  "director": [
+    "bp_report",
+    "bp_query"
+  ],
+  "external": [
+    "bp_info"
+  ],
+  "tallyman": [
+    "bp_report",
+    "bp_query"
+  ]
+}

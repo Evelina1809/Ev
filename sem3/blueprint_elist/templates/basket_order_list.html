@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Набор бригады</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='bp_account.css')}}">
+    <style type="text/css">
+        body {
+            background: url('https://oir.mobi/uploads/posts/2019-12/1575762064_4-5.jpg');
+            background-size: cover;
+        }
+        a {
+        font-size  : 16pt;
+        color: black
+        }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        <h1>Набор бригады на разгрузку корабля с регистрацией №</h1> <h1>{{registration}}</h1>
+        <br><br>
+        <a href="{{url_for('bp_elist.save_order')}}"> Сохранить набор бригады </a>
+        <br><br>
+        <a href="{{url_for('menu_choice')}}"> Вернуться в меню пользователя </a>
+    </div>
+
+    {% import 'basket_utils.html' as utils %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Все сотрудники</h2>
+                {% if items %}
+                    {% for item in items %}
+                        {{ utils.render_item(item, show_form=True) }}
+                    {% endfor %}
+                {% else %}
+                    <p>Нет работников</p>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <h2 style="color: blue">Ваш выбор сотрудников</h2>
+                <a style="color: green" href="{{url_for('bp_elist.clear_basket')}}">Очистить выбор</a>
+                <h3>{{message}}</h3>
+                {% if basket %}
+                    {% for key in basket %}
+                        {{ utils.render_item(basket[key], show_form=False) }}
+                    {% endfor %}
+                {% else %}
+                    <p>Сотрудники не выбраны</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

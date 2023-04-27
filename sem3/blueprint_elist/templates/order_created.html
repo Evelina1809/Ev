@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ создан</title>
+    <style type="text/css">
+        body {
+            background: url('https://oir.mobi/uploads/posts/2019-12/1575762064_4-5.jpg');
+            background-size: cover;
+           }
+        a {
+        font-size  : 16pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 align="center"> Бригада на разгрузку корабля с регистрацией №{{regID}} успешно создана</h2>
+    <center>
+        <a href="{{url_for('bp_elist.start_elist')}}"> Нажмите для возврата на страницу выбора зарегистрированного корабля для разгрузки</a>
+    </center>
+</body>
+</html>

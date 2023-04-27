@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block external_user %}
+<p align="center">
+        <div align = center>
+        <a href ={{url_for('bp_info.elist_table')}}> Узнать о расписании разгрузок</a>
+        <br><br><br>
+        <a href ={{url_for('bp_info.history')}}> Узнать об истории порта</a>
+        <br><br><br>
+        <a href="{{url_for('start_func')}}"> Вернуться назад </a>
+        </div>
+    <a href="/exit"> Нажмите для выхода из системы</a>
+</p>
+{% endblock %}

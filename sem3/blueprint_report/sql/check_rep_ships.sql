@@ -1,0 +1,1 @@
+select count(shipr_id) from ships_rep where year(ships_date)=year('$input_date') and month(ships_date)=month('$input_date') and day(ships_date) = day('$input_date')

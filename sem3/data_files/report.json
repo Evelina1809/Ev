@@ -1,0 +1,10 @@
+//report_list =
+[
+    {"rep_name": "Отчет о регистрации сотрудников", "rep_id":"1"},
+    {"rep_name":"Отчет о регистрации кораблей", "rep_id": "2"}
+]
+
+//report_url = {
+//    '1': {'create_rep': 'bp_report.create_rep1', 'view_rep': 'bp_report.view_rep1'},
+//    '2': {'create_rep': 'bp_report.create_rep2', 'view_rep': 'bp_report.view_rep2'}
+//}

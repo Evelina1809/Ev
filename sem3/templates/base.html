@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base_menu</title>
+    <link href="static/main.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+    body {
+            background: url('https://oir.mobi/uploads/posts/2019-12/1575762064_4-5.jpg');
+            background-size: cover;
+    }
+   A:link {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+   }
+   A:visited { text-decoration: none; }
+   A:active { text-decoration: none; }
+    A:hover {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    color: white; /* Цвет ссылки */
+   }
+</style>
+<body>
+    <div>
+        <h1 align="center"> Вам доступны следующие действия </h1>
+        {% block internal_user %}{% endblock %}
+        {% block external_user %}{% endblock %}
+    </div>
+</body>
+</html>

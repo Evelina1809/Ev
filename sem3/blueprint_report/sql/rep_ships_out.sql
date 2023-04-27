@@ -1,0 +1,1 @@
+select ships_count, ships_date from ships_rep where ships_date='$input_date'

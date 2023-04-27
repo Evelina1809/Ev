@@ -1,0 +1,19 @@
+{% macro render_item(item, show_form=False) %}
+<div style="border-style: solid; border-color: black; margin: 5px">
+    <p>
+        <span style="color: black"> Профессия:</span>
+        <span style="color: green"> {{item['eProf']}}</span>
+        <span style="color: black"> Фамилия:</span>
+        <span style="color: green"> {{item['eSurename']}}</span>
+    </p>
+    {% if show_form %}
+    <div>
+        <form action="" method="post">
+            <input type="hidden" name="eID" value="{{item['eID']}}">
+            <input type="submit" name="action" value="Добавить">
+        </form>
+    </div>
+    {% endif %}
+
+</div>
+{% endmacro %}

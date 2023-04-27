@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор регистрации корабля для разгрузки</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link type=" text/css" rel="stylesheet" href="{{url_for('static', filename='bp_account.css')}}">
+    <style type="text/css">
+      body {
+            background: url(https://oir.mobi/uploads/posts/2021-03/1616530676_12-p-morskoi-fon-15.jpg);
+            background-size: cover;
+      }
+    a {
+        font-size  : 16pt;
+    }
+
+</style>
+</head>
+
+<body>
+    <div align="center">
+        <br><br>
+        <a href="{{url_for('menu_choice')}}"> Вернуться в меню пользователя </a>
+    </div>
+
+    {% import 'reg_utils.html' as utils %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Все неразгруженные корабли</h2>
+                {% if regs %}
+                    {% for reg in regs %}
+                        {{ utils.render_item(reg) }}
+                    {% endfor %}
+                {% else %}
+                    <p>Все корабли разгружены</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

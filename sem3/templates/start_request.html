@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work with requests</title>
+</head>
+<style>
+   body {
+        background: url('https://img.geliophoto.com/amtp/22_amtp.jpg');
+        background-size: cover;
+   }
+   A:link {
+        text-decoration: none; /* Убирает подчеркивание для ссылок */
+   }
+   A:visited {
+        text-decoration: none;
+   }
+   A:active {
+        text-decoration: none;
+   }
+   A:hover {
+        font-size: 24px; /* Размер шрифта */
+        font-weight: bold; /* Жирное начертание */
+        color: white; /* Цвет ссылки */
+    }
+</style>
+<body>
+  <h4 align = center> Выберете действие</h4>
+  <br><br><br>
+
+    <div align = center>
+<!--        <a href ={{url_for('bp_query.choice')}}> Начать запросы</a>-->
+<!--        <br><br><br>-->
+        <a href ={{url_for('bp_auth.start_auth')}}> Авторизоваться</a>
+        <br><br><br>
+        <a href="{{url_for('exit_func')}}"> Завершить работу </a>
+    </div>
+</body>
+</html>

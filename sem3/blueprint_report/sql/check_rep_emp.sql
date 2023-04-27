@@ -1,0 +1,1 @@
+select count(empr_id) from employees_rep where empr_month='$input_month' and empr_year='$input_year'

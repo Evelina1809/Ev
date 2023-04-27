@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ввод данных</title>
+    <style type="text/css">
+      h2 { font-size  : 14pt;
+           color      : black
+      }
+      label { font-size  : 14pt;
+              color      : green
+      }
+      er {    font-size  : 10pt;
+              color      : red;
+      {
+    </style>
+</head>
+
+<style>
+    body {
+            background: url('https://img.geliophoto.com/amtp/22_amtp.jpg');
+            background-size: cover;
+    }
+   A:link {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+   }
+   A:visited { text-decoration: none; }
+   A:active { text-decoration: none; }
+    A:hover {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    color: white; /* Цвет ссылки */
+   }
+</style>
+
+<body>
+  <h2 align="center"> Введите данные</h2>
+    <div align = center>
+        <form action="", method ="POST">
+            <label for="date">Введите дату</label>
+            <input name = date_name id = "date" type="date" required="required"/>
+            <br>
+            <input type = submit value ="Отправить">
+            <er align="center"> {{ errone }} </er>
+            <er align="center"> {{ errtwo }} </er>
+        </form>
+    </div>
+    <br>
+    <div align = center>
+        <a href = {{url_for('bp_report.start_report')}}> Вернуться назад</a>
+    </div>
+</body>
+</html>

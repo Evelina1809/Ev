@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block internal_user %}
+<p align="center">
+    <a href ={{url_for('bp_query.choice')}}> Начать запросы</a>
+    <br><br><br>
+    <a href ={{url_for('bp_report.start_report')}}> Начать работу с отчетами</a>
+    <br><br><br>
+    <a href ={{url_for('bp_elist.start_elist')}}> Начать набор бригады на разгрузку</a>
+    <br><br><br>
+    <a href="/exit"> Нажмите для выхода из системы</a>
+</p>
+{% endblock %}

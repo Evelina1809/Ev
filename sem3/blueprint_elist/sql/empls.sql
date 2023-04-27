@@ -1,0 +1,1 @@
+select eID, eProf, eSurename from Employee where eID = '$input_eID'

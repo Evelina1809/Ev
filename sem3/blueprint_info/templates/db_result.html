@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат поиска</title>
+<!--    <link  rel="stylesheet" href="{{url_for('static', filename='sem3.css')}}">-->
+    <style type="text/css">
+      body {
+            background: url(https://oir.mobi/uploads/posts/2021-03/1616530676_12-p-morskoi-fon-15.jpg);
+            background-size: cover;
+      }
+        h1 {
+            font-size  : 16pt;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+ <h1 align="center"> {{search}} </h1> <br><br>
+
+    <table border = 1 width = 80%>
+      <tr>
+          {% for column in schema %}
+            <td class= border align="center">{{column}}</td>
+          {% endfor %}
+      </tr>
+        {% for line in result %}
+          <tr>
+           {% for column in line %}
+              <td align = 'center'>{{column}}</td>
+           {% endfor %}
+         </tr>
+        {% endfor %}
+    </table> <br><br>
+</body>
+</html>
